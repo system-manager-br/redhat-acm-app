@@ -24,19 +24,3 @@ spec:
       operator: In
       values:
       - ruby-app
----
-apiVersion: apps.open-cluster-management.io/v1
-kind: Subscription
-metadata:
-  name: ruby-app
-  namespace: pardini03
-  labels:
-    app: ruby-app
-  annotations:
-    apps.open-cluster-management.io/github-path: resources/ruby
-spec:
-  channel: ruby/ruby-app-latest
-  placement:
-    placementRef:
-      kind: PlacementRule
-      name: prd-clusters
