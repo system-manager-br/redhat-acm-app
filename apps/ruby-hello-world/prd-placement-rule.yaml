@@ -1,7 +1,8 @@
 apiVersion: apps.open-cluster-management.io/v1
 kind: PlacementRule
 metadata:
-  name: prd-clusters 
+  name: prd-clusters
+  namespace: pardini04
 spec:
   clusterConditions:
     - type: ManagedClusterConditionAvailable
