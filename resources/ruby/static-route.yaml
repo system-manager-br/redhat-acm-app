@@ -3,7 +3,7 @@ kind: Route
 metadata:
   labels:
     app: ruby-app
-  name: ruby-app
+  name: prd-route
 spec:
   host: production-route.example.com
   port:
