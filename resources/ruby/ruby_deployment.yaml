@@ -20,7 +20,7 @@ spec:
         app: ruby-app
     spec:
       containers:
-        image: quay.io/paulo_luizetto/ruby-hello-world-image/rhw:v1.0
+      - image: quay.io/paulo_luizetto/ruby-hello-world-image/rhw:v1.0
         imagePullPolicy: Always
         name: ruby-app
         resources:
