@@ -1,0 +1,20 @@
+apiVersion: v1
+kind: Service
+metadata:
+  labels:
+    app: ruby-app
+    app.kubernetes.io/component: ruby-app
+    app.kubernetes.io/instance: ruby-app
+    app.kubernetes.io/name: ruby-app
+    app.kubernetes.io/part-of: ruby-app
+  name: ruby-app
+spec:
+  ports:
+  - name: 8080-tcp 
+    port: 8080 
+    protocol: TCP
+  selector:
+    app: ruby-app 
+    deploymentconfig: ruby-app
+  sessionAffinity: None
+  type: ClusterIP
