@@ -3,15 +3,9 @@ kind: Deployment
 metadata:
   labels:
     app: ruby-app
-    app.kubernetes.io/component: ruby-app
-    app.kubernetes.io/instance: ruby-app
-    app.kubernetes.io/name: ruby-app
-    app.kubernetes.io/part-of: ruby-app
   name: ruby-app
 spec:
-  progressDeadlineSeconds: 600
   replicas: 1
-  revisionHistoryLimit: 10
   selector:
     matchLabels:
       app: ruby-app
@@ -22,10 +16,8 @@ spec:
     type: RollingUpdate
   template:
     metadata:
-      creationTimestamp: null
       labels:
         app: ruby-app
-        deploymentconfig: ruby-app
     spec:
       containers:
         image: quay.io/paulo_luizetto/ruby-hello-world-image/rhw:v1.0
