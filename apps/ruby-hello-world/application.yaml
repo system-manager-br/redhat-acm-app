@@ -2,7 +2,7 @@ apiVersion: app.k8s.io/v1beta1
 kind: Application
 metadata:
   name: ruby-app
-  namespace: pardini04
+  namespace: pardini05
 spec:
   componentKinds:
   - group: apps.open-cluster-management.io
